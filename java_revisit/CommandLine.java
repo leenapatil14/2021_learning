@@ -1,9 +1,9 @@
 import java.util.Scanner;
-class Calculator {
+class CommandLine {
     public static void main(String [] args) {
         while (true) {
             //display list of operations
-            System.out.println("List of operations: add subtract multiply divide alphabetize \n Enter operation: ");
+            System.out.println("add subtract multiply divide alphabetize \n Enter operation: ");
             //get input from user
             Scanner ip = new Scanner(System.in);
             //convert the string inout to lower case
