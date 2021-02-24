@@ -5,13 +5,12 @@ public class AmongUs{
         Crewmate wonderwoman=new Crewmate("Wonder Woman");
         Crewmate deadpool=new Crewmate("Deadpool");
         Crewmate captain=new Crewmate("Captain America");
-        Crewmate batman=new Crewmate("Batman");
+        Crewmate batman=new Crewmate("Batman",10);
         Player[] players={joker,thanos,wonderwoman,deadpool,captain,batman};
 
         //wonderwoman performs tasks
         System.out.println(wonderwoman.performTask());
-        //thanos kills batman
-        thanos.kill(batman);
+        System.out.println(batman.performTask());
         //captain kills joker
         captain.emergencyMeeting(players);
         //thanos sabotages deadpool thereby decresing its suspection level
@@ -29,7 +28,7 @@ public class AmongUs{
         thanos.sabotage(deadpool);
         //wonder women call meeting kills deadpool as it has max suspection level
         wonderwoman.emergencyMeeting(players);
-        //wonderwoman kills thanos by call meeting. Hence, only wonderwoman is alive, so crewmates win!
+        //wonderwoman kills thanos by call meeting. Hence, only wonderwoman and batman are alive, so crewmates win!
         wonderwoman.emergencyMeeting(players);
         
         System.out.println(joker+"\n"+thanos+"\n"+wonderwoman+"\n"+deadpool+"\n"+captain+"\n"+batman);

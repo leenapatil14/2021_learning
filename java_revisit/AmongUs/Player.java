@@ -38,8 +38,9 @@ public class Player{
     public void kill(Player c){
         if(c.getIsAlive() && this.getIsAlive()){
             c.setIsAlive(false);
+            System.out.println(c.name +" killed");
         }
-        // System.out.println(c+" killed");
+        
     }
 
     //compare objects
