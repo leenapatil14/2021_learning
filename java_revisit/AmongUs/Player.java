@@ -33,19 +33,26 @@ public class Player{
     Player(){
         this("unnamed",50);
     }
+
+    //kill a player if both current player and player c are alive
     public void kill(Player c){
         if(c.getIsAlive() && this.getIsAlive()){
             c.setIsAlive(false);
         }
         // System.out.println(c+" killed");
     }
+
+    //compare objects
     public boolean equals(Player p){
         return this.name==p.name && this.suspect_rate==p.suspect_rate;
     }
+    
+    //hold emergency meeting
     public void emergencyMeeting(Player[] players){
         if(this.getIsAlive()){
             double max_=-1;
             Player tokill=null;
+            //get and kill player with maximum suspection level
             for(Player p: players){
                 if(!p.equals(this) && p.getIsAlive() && p.getSuspect()>max_){
                     max_=p.getSuspect();
@@ -54,10 +61,12 @@ public class Player{
                 }
             }
             this.kill(tokill);
+            //check if game is over
             finish(players);
         }
     }
 
+    //check if game is over
     private void finish(Player[] players){
         int deadImpostors=0;
         int deadCrewmates=0;

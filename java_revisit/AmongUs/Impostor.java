@@ -2,6 +2,8 @@ public class Impostor extends Player{
     Impostor(String name,double suspect_rate){
         super(name,suspect_rate);
     }
+    
+    //sabotage a player and alter the suspection level
     public void sabotage(Player c){
         if(c.getIsAlive() && this.getIsAlive()){
             if (this.getSuspect()<70){

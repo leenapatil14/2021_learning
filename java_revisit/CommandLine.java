@@ -1,3 +1,9 @@
+/** A Simple java command line program 
+ * to perform arithematic operations based on user inputs.
+ * It propmts user to enter desired operation, 
+ * perform the arithematic, display results and terminate.
+ * Also, it checks for any errors in user input, if so, 
+ * promts again for valid inputs */
 import java.util.Scanner;
 class CommandLine {
     public static void main(String [] args) {

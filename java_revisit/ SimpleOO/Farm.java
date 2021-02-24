@@ -10,11 +10,15 @@ public class Farm{
         
         
         bald.eat(ripple);
+        //have bald eagle eat ripple snake (the snake won't be killed as it's venom is more powerful)
         System.out.println(ripple);
+        //increase harpy eagle's mass 
         harpy.grow(8);
+        //have harpy kill ripple (snak is killed)
         harpy.eat(ripple);
         System.out.println(ripple);
         System.out.println(harpy);
+        //increase age of golden eagle by 1
         golden.grow();
         System.out.println(golden);
         

@@ -19,6 +19,7 @@ public class Snake{
         this.mass=mass;
         this.venomPower=venomPower;
     }
+    //Constructor chaining
     Snake(){
         this(50,10.0);
     }
@@ -34,6 +35,7 @@ public class Snake{
             return "I/’m a poisonous with "+this.venomPower+" of venom and "+this.mass+" mass.";
         }
     }
+    //increase snake's mass and change venom power accordingly
     public void grow(int addedmass){
         this.mass+=addedmass;
         if(this.mass>100){
@@ -43,6 +45,7 @@ public class Snake{
             this.venomPower-=(addedmass);
         }
     }
+    //check if snake is dead
     public boolean isDead(){
         return this.mass==0;
     }

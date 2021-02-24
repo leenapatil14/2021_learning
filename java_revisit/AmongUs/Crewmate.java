@@ -17,6 +17,7 @@ public class Crewmate extends Player {
         setNumTasks(5);
     }
 
+    //perform tasks
     public String performTask(){
         if(this.getIsAlive()){
             this.numTasks-=1;
